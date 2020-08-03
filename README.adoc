@@ -1,0 +1,15 @@
+= update_docker_compose
+
+Update docker compose
+
+== Install
+
+[source,shell]
+----
+fisher add github.com/mimikun/update_docker_compose
+----
+
+== Require
+
+* docker-compose
+
