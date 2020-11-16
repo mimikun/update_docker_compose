@@ -6,10 +6,10 @@ Update docker compose
 
 [source,shell]
 ----
-fisher add github.com/mimikun/update_docker_compose
+fisher install mimikun/update_docker_compose
 ----
 
 == Require
 
 * docker-compose
-
+* https://github.com/mimikun/read_confirm[read_confirm]
