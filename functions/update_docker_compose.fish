@@ -1,7 +1,8 @@
 function update_docker_compose --description 'Update docker-compose'
     echo "Update docker-compose?"
     if read_confirm
-        set OLD_VERSION (docker-compose version --short)
+        set TEMPSTR (docker-compose version --short)
+        set OLD_VERSION "v$TEMPSTR"
         set VERSION (curl --silent https://api.github.com/repos/docker/compose/releases/latest | jq .name -r)
         set DESTINATIONS "/usr/local/bin/docker-compose" "$HOME/.docker/cli-plugins/docker-compose"
         if test $OLD_VERSION != $VERSION
